@@ -25,19 +25,9 @@ body{
 header{
     background-color: dimgray;
     display: flex;
-    flex-direction: row-reverse;
+    justify-content: center;
 }
 
-.header__text{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-family: "Gayathri", sans-serif;
-    font-size: 30px;
-    text-align: center;
-    text-decoration: none;
-}
 
 .logo{
     box-sizing: border-box;
