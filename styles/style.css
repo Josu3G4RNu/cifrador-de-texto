@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gayathri:wght@100;400;700&display=swap');
+
+:root{
+    --color-de-fondo: dimgray;
+    --fuente-principal: 'Inter', sans-serif;
+    --color-de-secciones: white;
+    --color-de-botones: white;
+    --color-de-botones-hover: #456990;
+    --sombra-de-elementos: 2px 2px 8px #000;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    box-sizing: border-box;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--color-de-fondo);
+}
+
+header{
+    background-color: dimgray;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.header__text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: "Gayathri", sans-serif;
+    font-size: 30px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.logo{
+    box-sizing: border-box;
+    width: 8%;
+}
+
+
+.main-container{
+    box-sizing: border-box;
+    margin: 1% 10%;
+    height: 80%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.main-container__interfaz{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 1em;
+}
+
+.main-container__interfaz__texto{
+    box-sizing: border-box;
+    width: 100%;
+    height: 90%;
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 3%;
+    background: var(--color-de-secciones);
+    border-radius: 24px;
+    box-shadow: var(--sombra-de-elementos);
+}
+
+.main-container__interfaz__nota{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 8px;
+    color: gray;
+    font-family: var(--fuente-principal);
+    font-size: 10px;
+}
+
+#texto_a_operar{
+    outline: none;
+    resize: none;
+    border: none;
+    background-color: var(--color-de-secciones);
+    height: 100%;
+
+    font-family: var(--fuente-principal);
+    font-size: 20px;
+    color: black;
+}
+
+.main-container__interfaz__botones{
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.boton__interfaz {
+    border-radius: 24px;
+    background: var(--color-de-botones);
+    border: solid 1px #0C4387;
+    padding: 1%;
+    color: black;
+    width: 45%;
+    box-shadow: var(--sombra-de-elementos);
+}
+
+.main-container__resultado{
+    box-sizing: border-box;
+    height: 100%;
+    width: 25%;
+    border-radius: 24px;
+    background-color: var(--color-de-secciones);
+    gap: 2%;
+    box-shadow: var(--sombra-de-elementos);
+}
+
+#main-container__resultado__items{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    gap: 5px;
+    font-family: var(--fuente-principal);
+    text-align: center;
+}
+
+.main-container__resultado__items__imagen{
+    max-width: 100%;
+    opacity: .5;
+}
+
+.main-container__resultado__items__titulo{
+    font-size: 16px;
+    color: dimgray;
+}
+
+.main-container__resultado__items__texto{
+    font-size: 12px;
+    color: dimgray;
+}
+
+#contenedor-oculto{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.contenedor-oculto__texto{
+    height: 85%;
+    overflow: auto;
+}
+
+#texto_resultado {
+    word-break: break-word;
+    padding: 3%;
+    font-family: var(--fuente-principal);
+    font-size: 20px;
+    color: dimgray;
+}
+
+.contenedor-oculto__botones{
+    display: flex;
+    justify-content: center;
+    height: 10%;
+}
+
+.contenedor-oculto__botones__boton{
+    height: 100%;
+    width: 90%;
+    padding: 1%;
+    margin: 1%;
+    border-radius: 24px;
+    border: solid 1px #0C4387;
+    color: #121212;
+    font-family: var(--fuente-principal);
+    box-shadow: var(--sombra-de-elementos);
+}
+
+footer{
+    margin-top: 3%;
+    padding: 1%;
+    box-sizing: content-box;
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+    color: white;
+    gap: 10px;
+}
+
+.footer__links{
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-around;
+    gap: 0.2em;
+}
+
+.footer__links__link{
+    display: flex;
+    align-items: center;
+    gap: .2em;
+    font-size: 24px;
+    text-decoration: none;
+    color: white;
+}
+
+button:hover{
+    color: white;
+    border: none;
+    background-color: var(--color-de-botones-hover);
+}
+
