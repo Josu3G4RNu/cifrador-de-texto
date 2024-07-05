@@ -1,46 +1,58 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es-mx">
 <head>
     <meta charset="UTF-8">
-    <title>Encriptado de Texto</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cifrado de Texto</title>
     <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
-<header class="presentacion__header">
-    <img src="./assets/logo.png" alt="Logo de Key on Fire">
-</header>
-<main class="presentacion">
-    <section class="presentacion__interfaz">
-        <div class="presentacion__interfaz__nota">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                 stroke="currentColor"
-                 class="size-6">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                      d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z"/>
-            </svg>
-            <p>Solo letras minúsculas y sin acentos</p>
+
+    <header><a class="header__text" href="https://github.com/Josu3G4RNu"><img class="logo" src="./assets/logo.png" alt="Logo de Key on Fire">Cifrado de Texto</a></header>
+
+    <main class="main-container">
+        <section class="main-container__interfaz">
+            <div class="main-container__interfaz__texto">
+                <div class="main-container__interfaz__nota">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" class="bi bi-exclamation-circle-fill" viewBox="0 0 16 16">
+                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4m.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2"/>
+                    </svg>
+                    <p>Solo letras minúsculas y sin acentos</p>
+                </div>
+                <textarea autofocus id="texto_a_operar" placeholder="Ingresa el texto aquí..."></textarea>
+            </div>
+
+            <div class="main-container__interfaz__botones">
+                <button class="boton__interfaz" onclick="cifrarTexto();">Cifrar</button>
+                <button class="boton__interfaz" onclick="descifrarTexto();">Descifrar</button>
+            </div>
+        </section>
+        <section class="main-container__resultado">
+            <div id="main-container__resultado__items" >
+                <img class="main-container__resultado__items__imagen" src="assets/lupa.png" alt="Persona con una Lupa">
+                <h2 class="main-container__resultado__items__titulo">Ningún mensaje encontrado</h2>
+                <p class="main-container__resultado__items__texto">Ingresa el texto que deseas cifrar o descifrar</p>
+            </div>
+            <div id="contenedor-oculto" style="display: none">
+                <div class="contenedor-oculto__texto">
+                    <p id="texto_resultado"></p>
+                </div>
+                <div class="contenedor-oculto__botones">
+                    <button class="contenedor-oculto__botones__boton" onclick="copiarTexto();">Copiar</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Josué García Núñez |</p>
+        <div class="footer__links">
+        <a class="footer__links__link" href="https://github.com/Josu3G4RNu"><img src="./assets/github.png" alt="Logo Github"> Github</a>
+        <a class="footer__links__link" href="https://www.linkedin.com/in/josue-garnu-3b6602263/"><img src="./assets/linkedin.png" alt="Logo LinkedIn"> LinkedIn</a>
         </div>
-        <textarea class="presentacion__interfaz__areaDeLlenado" name="texto_a_descifrar" id="texto_a_descifrar"
-                  placeholder="Ingresa el texto aquí"></textarea>
+    </footer>
 
-        <div class="presentacion__interfaz__botones">
-            <button class="presentacion__interfaz__boton1" onclick="encriptarTexto();">Encriptar</button>
-            <button class="presentacion__interfaz__boton2" onclick="desencriptarTexto();">Desencriptar</button>
-        </div>
-
-    </section>
-
-    <section class="presentacion__resultado">
-        <input type="image" src="./assets/investigadora.png" alt="No hay texto con el cual operar" disabled="disabled">
-        <!--        <img src="./assets/investigadora.png" alt="Investigadora">-->
-        <!--        <h3 class="presentacion__resultado__tituloTextoSinDecifrar">Ningún mensaje fue encontrado</h3>-->
-        <!--        <p class="presentacion__resultado__textoSinDecifrar">Ingresa el texto que desees encriptar o desencrptar</p>-->
-    </section>
-</main>
-<footer class="footer">
-    <p>Desarrollado por Josué García Núñez |</p>
-    <a href="https://github.com/Josu3G4RNu"><img src="./assets/github.png" alt="Logo de Github">GitHub</a>
-    <a href="https://www.linkedin.com/in/josue-garnu-3b6602263/"><img src="./assets/linkedin.png" alt="Logo de LinkedIn">LinkedIn</a>
-</footer>
+    <script src="./app.js"></script>
 </body>
 </html>
