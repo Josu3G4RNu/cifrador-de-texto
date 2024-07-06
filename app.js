@@ -8,27 +8,35 @@ llavesDeEncriptado.set("u", "ufat");
 
 function cifrarTexto() {
     let textoACifrar = document.getElementById('texto_a_operar').value;
-    let textoCifrado = "";
-    for (let [key, value] of llavesDeEncriptado) {
-        textoCifrado = textoACifrar.replaceAll(key, value);
-        textoACifrar = textoCifrado;
+    if (textoACifrar === "") {
+        alert("No hay nada que cifrar. Favor, ingresa el texto en el área correspondiente");
+    } else {
+        let textoCifrado = "";
+        for (let [key, value] of llavesDeEncriptado) {
+            textoCifrado = textoACifrar.replaceAll(key, value);
+            textoACifrar = textoCifrado;
+        }
+        mostrarResultado(textoCifrado);
     }
-    mostrarResultado(textoCifrado);
 }
 
 function descifrarTexto() {
     let textoADescifrar = document.getElementById('texto_a_operar').value;
-    let textoDescifrado = "";
-    for (let [key, value] of llavesDeEncriptado) {
-        textoDescifrado = textoADescifrar.replaceAll(value, key);
-        textoADescifrar = textoDescifrado;
+    if (textoADescifrar === "") {
+        alert("No hay nada que cifrar. Favor, ingresa el texto en el área correspondiente");
+    } else {
+        let textoDescifrado = "";
+        for (let [key, value] of llavesDeEncriptado) {
+            textoDescifrado = textoADescifrar.replaceAll(value, key);
+            textoADescifrar = textoDescifrado;
+        }
+        mostrarResultado(textoDescifrado);
     }
-    mostrarResultado(textoDescifrado);
 }
 
 function copiarTexto() {
     const contenedor = document.getElementById('texto_resultado');
-    let rango= document.createRange();
+    let rango = document.createRange();
     rango.selectNode(contenedor);
     window.getSelection().removeAllRanges();
     window.getSelection().addRange(rango);
@@ -44,7 +52,7 @@ function copiarTexto() {
 
 function mostrarResultado(texto) {
     document.getElementById("main-container__resultado__items").style.display = "none";
-    document.getElementById("contenedor-oculto").style.display = "block";
+    document.getElementById("contenedor-oculto").style.display = "flex";
     document.getElementById("texto_resultado").innerHTML = texto;
 
 }
