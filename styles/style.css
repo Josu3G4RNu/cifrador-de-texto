@@ -26,19 +26,26 @@ header{
     background-color: dimgray;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
-
 
 .logo{
     box-sizing: border-box;
-    width: 8%;
+    height: 100%;
+    width: 7%;
 }
 
+#title{
+    padding: 1% 0 0 0;
+    font-family: "Gayathri", sans-serif;
+    font-size: 1.5rem;
+    color: white;
+}
 
 .main-container{
     box-sizing: border-box;
     margin: 1% 10%;
-    height: 80%;
+    height: 90%;
     display: flex;
     justify-content: space-evenly;
 }
@@ -79,7 +86,7 @@ header{
     border: none;
     background-color: var(--color-de-secciones);
     height: 100%;
-
+    overscroll-behavior: contain;
     font-family: var(--fuente-principal);
     font-size: 20px;
     color: black;
@@ -99,6 +106,7 @@ header{
     color: black;
     width: 45%;
     box-shadow: var(--sombra-de-elementos);
+    font-family: var(--fuente-principal);
 }
 
 .main-container__resultado{
@@ -148,11 +156,12 @@ header{
 .contenedor-oculto__texto{
     height: 85%;
     overflow: auto;
+    overscroll-behavior: contain;
+    word-break: break-word;
+    margin: 3%;
 }
 
 #texto_resultado {
-    word-break: break-word;
-    padding: 3%;
     font-family: var(--fuente-principal);
     font-size: 20px;
     color: dimgray;
@@ -177,14 +186,23 @@ header{
 }
 
 footer{
-    margin-top: 3%;
-    padding: 1%;
-    box-sizing: content-box;
+    height: 3%;
+    margin: 3%;
     display: flex;
     justify-content: center;
-    font-size: 24px;
-    color: white;
     gap: 10px;
+}
+
+.footer__texts{
+    box-sizing: border-box;
+    height: 100%;
+    align-content: center;
+}
+
+.footer__text{
+    box-sizing: border-box;
+    font-size: 100%;
+    color: white;
 }
 
 .footer__links{
@@ -198,7 +216,7 @@ footer{
     display: flex;
     align-items: center;
     gap: .2em;
-    font-size: 24px;
+    font-size: 100%;
     text-decoration: none;
     color: white;
 }
@@ -207,5 +225,60 @@ button:hover{
     color: white;
     border: none;
     background-color: var(--color-de-botones-hover);
+}
+
+@media (max-width: 1250px) {
+
+    body{
+        height: 100vh;
+        scrollbar-width: none;
+    }
+
+    .logo{
+        width: 10%;
+    }
+
+    .main-container{
+        height: 93%;
+        flex-direction: column;
+    }
+
+    .main-container__interfaz{
+        width: 100%;
+        height: 65%;
+    }
+
+    .main-container__resultado{
+        width: 100%;
+        height: 30%;
+    }
+
+    .main-container__resultado__items__imagen{
+        display: none;
+    }
+
+    #contenedor-oculto{
+
+    }
+
+    .contenedor-oculto__texto{
+        height: 75%;
+    }
+
+    .contenedor-oculto__botones{
+        height: 20%;
+        margin: 1% 4% 4% 4%;
+    }
+
+    .contenedor-oculto__botones__boton{
+        box-sizing: border-box;
+        height: 100%;
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 800px) {
+
 }
 
