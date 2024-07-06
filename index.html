@@ -9,9 +9,7 @@
     <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
-
-<header><img class="logo" src="./assets/logo.png" alt="Logo de Key on Fire"></header>
-
+    <header><img class="logo" src="./assets/logo.png" alt="Logo de Key on Fire"></header>
     <main class="main-container">
         <section class="main-container__interfaz">
             <div class="main-container__interfaz__texto">
@@ -25,8 +23,8 @@
             </div>
 
             <div class="main-container__interfaz__botones">
-                <button class="boton__interfaz" onclick="cifrarTexto();">Cifrar</button>
-                <button class="boton__interfaz" onclick="descifrarTexto();">Descifrar</button>
+                <button id="btn-cifrar" class="boton__interfaz" onclick="cifrarTexto();">Cifrar</button>
+                <button id="btn-descifrar" class="boton__interfaz" onclick="descifrarTexto();">Descifrar</button>
             </div>
         </section>
         <section class="main-container__resultado">
@@ -46,13 +44,14 @@
         </section>
     </main>
     <footer>
-        <p>Josué García Núñez |</p>
+        <div class="footer__texts">
+            <p class="footer__text">Josué García Núñez |</p>
+        </div>
         <div class="footer__links">
         <a class="footer__links__link" href="https://github.com/Josu3G4RNu"><img src="./assets/github.png" alt="Logo Github"> Github</a>
         <a class="footer__links__link" href="https://www.linkedin.com/in/josue-garnu-3b6602263/"><img src="./assets/linkedin.png" alt="Logo LinkedIn"> LinkedIn</a>
         </div>
     </footer>
-
     <script src="./app.js"></script>
 </body>
 </html>
