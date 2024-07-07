@@ -51,4 +51,4 @@ Puedes contactarme por medio del siguiente correo - josuegarnu205@gmail.com
 
 ## Licencia 📜
 
-Este proyecto está bajo la Licencia MIT. Consulte el archivo LICENSE para obtener más detalles.
+Este proyecto está bajo la Licencia MIT. Consulte el archivo [LICENSE](https://github.com/Josu3G4RNu/cifrador-de-texto/blob/main/LICENSE) para obtener más detalles.
