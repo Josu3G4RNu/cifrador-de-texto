@@ -201,7 +201,8 @@ footer{
 
 .footer__text{
     box-sizing: border-box;
-    font-size: 100%;
+    font-family: var(--fuente-principal);
+    font-size: 15px;
     color: white;
 }
 
@@ -216,7 +217,8 @@ footer{
     display: flex;
     align-items: center;
     gap: .2em;
-    font-size: 100%;
+    font-family: var(--fuente-principal);
+    font-size: 15px;
     text-decoration: none;
     color: white;
 }
@@ -255,10 +257,6 @@ button:hover{
 
     .main-container__resultado__items__imagen{
         display: none;
-    }
-
-    #contenedor-oculto{
-
     }
 
     .contenedor-oculto__texto{
